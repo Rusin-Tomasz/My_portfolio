@@ -105,8 +105,8 @@ h6 {
 
 #main-header {
     height: 100vh;
-    /*    position: relative;*/
-    background: url('../img/smartphone.jpg') no-repeat;
+    background-image:linear-gradient(rgba(234, 234, 234, 0.9), rgba(234, 234, 234, 0.9)), url('../img/smartphone.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
     background-attachment: fixed;
@@ -114,40 +114,12 @@ h6 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
 }
 
-#main-header::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(234, 234, 234, 0.9);
-    z-index: 0;
-}
-
-/*
-#main-header::before {
-    content: 'Hello';
-    position: absolute;
-    bottom: 90px;
-    left: 50%;
-    z-index: 0;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 8rem;
-    text-transform: uppercase;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 800;
-    letter-spacing: 50px;
-}
-*/
 
 #main-header .header-inner1 {
     margin-right: 50px;
     text-align: center;
-    z-index: 5;
     width: 60%;
 }
 
@@ -159,7 +131,6 @@ h6 {
     border-radius: 20px;
     width: 30%;
     height: 500px;
-    z-index: 5;
     display: flex;
     flex-wrap: wrap;
     transition: all 0.4s;
@@ -299,21 +270,36 @@ h6 {
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 22%, rgba(246, 246, 246, 1) 47%, rgba(246, 246, 246, 1) 100%);
+    background-color: #3F5576;
+    color: #ffffff;
 }
 
-#about h4 {
-    color: #2032ff
+#about h2 {
+    width: 100%;
 }
 
-#about p {
+#about > p {
+    width: 70%;
+    font-size: 1.2rem;
+    line-height: 40px;
+    font-family: 'Merriweather Sans';
+}
+
+
+#about h3 {
+    color: #009dff;
+    font-size: 1.1rem;
+    font-family: 'Armata'
+}
+
+#about .features p {
     width: 100%;
 }
 
 #about .features {
     width: 35%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #1f375c;
     border-radius: 40px;
     margin: 20px;
     transition: all 0.4s;
@@ -321,12 +307,13 @@ h6 {
 
 #about .features:hover {
     transform: translateY(-2px);
-    box-shadow: 10px 13px 15px -2px rgba(189, 189, 189, 1);
+    box-shadow: 10px 13px 15px -2px rgb(15, 29, 67);
+    background-color: #203da2;
 }
 
 #about .features i {
     color: #ffffff;
-    background-color: #54ded9;
+    background-color: #3056ad;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -388,22 +375,38 @@ h6 {
     background-image: url("../icons/jQuery/512.png");
 }
 
-#skills .technologies {
-    margin-bottom: 150px;
+#technologies {
+    background-color: #3F5576;
+    color: #FFF;
 }
 
-#skills .technologies-head {
+#technologies .technologies-cn {
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+
+#technologies .technologies-head {
     font-size: 2.5rem;
 }
 
-#skills .technologies figure {
+#technologies .technologies-cn figure {
     display: inline-block;
+    background-color: #2b2c43;
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #bc6229;
     transition: all 0.4s;
 }
 
-#skills .technologies figure:hover {
-    transform: scale(0.9);
 
+
+#technologies .technologies-cn figure:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 13px 15px -2px rgba(189, 189, 189, 1);
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* ----------------Umiejętności koniec--------------------- */
@@ -489,24 +492,6 @@ h6 {
     background-image: url('../img/github-320.png');
 }
 
-/*
-#projects::before {
-    content: 'Projects';
-    position: absolute;
-    width: 20%;
-    height: 30%;
-    z-index: 0;
-    top: 0%;
-    left: 0%;
-    font-size: 18rem;
-    text-transform: uppercase;
-    transform: rotate(75deg);
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 600;
-    letter-spacing: 40px;
-    color: rgba(193, 193, 193, 0.1);
-}
-*/
 
 #projects::after {
     content: '';
