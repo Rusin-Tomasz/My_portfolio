@@ -1,0 +1,316 @@
+@media all and (min-width: 1000px) {
+
+
+    #skills .icon-1::after {
+        font-family: 'fontAwesome';
+        font-size: 90px;
+        content: '\f2d9';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        color: rgba(240, 8, 8, 0.6);
+        animation: scale 3s linear infinite;
+    }
+
+
+
+    #skills .icon-3::before {
+        font-family: 'fontAwesome';
+        font-size: 80px;
+        content: '\f185';
+        position: absolute;
+        bottom: -70px;
+        right: 0px;
+        color: #cccc5e;
+        animation: rotate 5s linear infinite;
+    }
+
+    #skills .icon-3::after {
+        font-family: 'fontAwesome';
+        font-size: 100px;
+        content: '\f0ac';
+        position: absolute;
+        top: -100px;
+        left: -45px;
+        color: rgba(188, 34, 34, 0.6);
+        animation: translate 7s linear infinite;
+    }
+
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+            color: rgba(240, 8, 8, 0.6);
+        }
+        50% {
+            transform: scale(1.05);
+            color: rgba(175, 25, 25, 0.6);
+        }
+        100% {
+            transform: scale(1);
+            color: rgba(240, 8, 8, 0.6);
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes translate {
+        0% {
+            transform: translate(0);
+        }
+        50% {
+            transform: translate(200%);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
+}
+
+
+
+@media all and (max-width: 1200px) {
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    #main-header .header-inner1 {
+        width: 40%;
+        line-height: 100px;
+    }
+
+    #main-header .header-inner2 {
+        width: 35%
+    }
+
+    #contact .my-mail {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 992px) {
+
+    #main-nav .toggle {
+        display: inline-block;
+        padding-right: 10px;
+        line-height: 50px;
+    }
+
+    #main-nav {
+        background-color: rgb(252, 252, 252);
+        text-align: right;
+    }
+
+    #main-nav ul {
+        display: none;
+        background-color: rgb(252, 252, 252);
+    }
+
+    #main-nav ul .list-item {
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+
+    #main-nav ul .list-item a {
+        font-size: 1.6rem;
+        font-family: 'armata' sans-serif;
+        font-weight: 600;
+    }
+
+    #main-nav ul li:hover::before {
+        font-family: 'fontAwesome';
+        content: '\f013';
+        position: absolute;
+        transform: translateX(-150%);
+        font-size: 1.4rem;
+        color: #16124a;
+
+    }
+
+    #main-header {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    #main-header .header-inner1 h2 {
+        width: 70%
+    }
+
+    #main-header .header-inner1 {
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+        line-height: 120px;
+        margin: 0;
+    }
+
+    #main-header .header-inner2 {
+        width: 60%;
+    }
+
+    #skills .icon {
+        height: 256px;
+        width: 256px;
+    }
+
+    #skills .icon-1 {
+        background-image: url("../icons/HTML5/256.png");
+    }
+
+    #skills .icon-2 {
+        background-image: url("../icons/CSS3/256.png");
+    }
+
+    #skills .icon-3 {
+        background-image: url("../icons/JS/256.png");
+    }
+
+    #skills .icon-4 {
+        background-image: url("../icons/jQuery/256.png");
+    }
+
+    section#skills h2 {
+        line-height: 80px;
+        font-size: 2.4rem;
+    }
+
+    #projects .projects-inner .project-sample {
+        width: 100%;
+    }
+
+    #projects .project-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    #contact .my-mail {
+        font-size: 18px;
+    }
+
+    #contact h2,
+    #projects h2 {
+        line-height: 60px;
+    }
+
+    #contact label {
+        line-height: 35px;
+    }
+}
+
+
+@media all and (max-width: 770px) {
+
+
+    #main-header .header-inner1 h2 {
+        width: 100%
+    }
+    
+
+    #about .features {
+        width: 80%;
+    }
+
+
+    #skills .skills-text {
+        width: 100%;
+    }
+
+    #skills .skills-inner .icon-2,
+    #skills .skills-inner .icon-4 {
+        order: 1;
+    }
+
+    #contact .left-side,
+    #contact .right-side {
+        width: 100%;
+
+    }
+}
+
+@media all and (max-width: 570px) {
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #main-header .header-inner1 h1 {
+        font-size: 4rem;
+    }
+
+    #main-header .header-inner1 h2 {
+        font-size: 2rem;
+
+    }
+
+    #main-header {
+        height: auto;
+        padding: 0
+    }
+
+    #main-header .header-inner1 {
+        width: 100%;
+    }
+
+    #main-header .header-inner2 {
+        width: 100%;
+    }
+
+    section#skills {
+        padding: 60px 0 0 0;
+    }
+
+    #skills .skills-inner,
+    #skills .skills-text,
+    #skills skills-inner h2 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #contact h3 {
+        font-size: 2.5rem;
+    }
+    #contact ul li {
+        margin: 0;
+    }
+    #projects h3 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media all and (max-width: 485px) {
+
+    section#about,
+    section#skills {
+        padding: 40px 10px;
+    }
+
+    section#projects,
+    section#contact {
+        padding: 40px 20px;
+    }
+
+    #about .features {
+        width: 100%;
+    }
+
+    .bg-1 {
+        height: 20vh;
+    }
+}
