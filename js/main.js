@@ -19,7 +19,6 @@ $(document).ready(function () {
 
     //    -------Walidacja formularza-------
     function validateForm(event) {
-
         if ($('#name').val() == '' || $('#name').val() == 'Podaj Imię!') {
             event.preventDefault();
             $('#name').val('Podaj Imię!');
@@ -77,7 +76,6 @@ $(document).ready(function () {
         $('.skills-text-4').hide();
 
         $(window).scroll(function () {
-            console.log('test');
             showIcons();
         });
     };
