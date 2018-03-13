@@ -8,7 +8,7 @@ $(document).ready(function () {
         };
 
     });
-//    -----Smooth Scroll------
+    //    -----Smooth Scroll------
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
         }, 1000);
     });
 
-//    -------Walidacja formularza-------
+    //    -------Walidacja formularza-------
     function validateForm(event) {
 
         if ($('#name').val() == '' || $('#name').val() == 'Podaj Imię!') {
@@ -64,22 +64,23 @@ $(document).ready(function () {
     $('.submit').click(validateForm);
 
     //  ---------Koniec walidacji formularza----------
-    
+
     //  ------------Pojawianie się ikon po scrollu----------
+    if (window.outerWidth > 1000) {
+        $('.icon-1').hide();
+        $('.icon-2').hide();
+        $('.icon-3').hide();
+        $('.icon-4').hide();
+        $('.skills-text-1').hide();
+        $('.skills-text-2').hide();
+        $('.skills-text-3').hide();
+        $('.skills-text-4').hide();
 
-    $('.icon-1').hide();
-    $('.icon-2').hide();
-    $('.icon-3').hide();
-    $('.icon-4').hide();
-    $('.skills-text-1').hide();
-    $('.skills-text-2').hide();
-    $('.skills-text-3').hide();
-    $('.skills-text-4').hide();
-
-    $(window).scroll(function () {
-        console.log('test');
-        showIcons();
-    });
+        $(window).scroll(function () {
+            console.log('test');
+            showIcons();
+        });
+    };
 
     function showIcons() {
         var headerHeight = parseInt($('#main-header').outerHeight(), 10);
@@ -92,18 +93,18 @@ $(document).ready(function () {
             $('.icon-1').show(1000, 'linear');
         };
 
-        if (actualY >= ((aboutHeight + headerHeight + 200 + skillsInnerHeight) * 0.8)) {
+        if (actualY >= ((aboutHeight + headerHeight + 400 + skillsInnerHeight) * 0.8)) {
             $('.skills-text-2').fadeIn(2000);
             $('.icon-2').show(1000, 'linear');
         };
 
-        if (actualY >= ((aboutHeight + headerHeight + 300 + skillsInnerHeight * 2) * 0.8)) {
+        if (actualY >= ((aboutHeight + headerHeight + 500 + skillsInnerHeight * 2) * 0.8)) {
             $('.skills-text-3').fadeIn(2000);
             $('.icon-3').show(1000, 'linear');
         };
 
-        if (actualY >= ((aboutHeight + headerHeight + 600 + skillsInnerHeight * 3) * 0.8)) {
-            $('.skills-text-4').fadeIn(1000);
+        if (actualY >= ((aboutHeight + headerHeight + 800 + skillsInnerHeight * 3) * 0.8)) {
+            $('.skills-text-4').fadeIn(2000);
             $('.icon-4').show(1000, 'linear');
         };
     };
