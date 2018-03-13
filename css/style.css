@@ -172,18 +172,8 @@ h6 {
     line-height: 100px;
 }
 
-#main-header .header-inner1 h1 span {
-    color: #110d3b;
-    font-weight: 500;
-}
-
 #main-header .header-inner1 h2 {
     font-size: 3rem;
-}
-
-#main-header .header-inner1 h2 span {
-    color: #393939;
-    font-weight: 400;
 }
 
 #main-header .header-inner2 .tablet-item {
