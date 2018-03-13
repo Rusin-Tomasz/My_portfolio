@@ -718,6 +718,10 @@ h6 {
     outline: none;
 }
 
+.input-error {
+    color: red;
+    border: 2px solid red;
+}
 
 .bg-1 {
     height: 45vh;
