@@ -241,19 +241,8 @@
 
 @media all and (max-width: 770px) {
 
-
-    #main-header .header-inner1 h2 {
-        width: 100%
-    }
-
-
     #about .features {
         width: 80%;
-    }
-
-
-    #skills .skills-text {
-        width: 100%;
     }
 
     #skills .skills-inner .icon-2,
@@ -262,7 +251,9 @@
     }
 
     #contact .left-side,
-    #contact .right-side {
+    #contact .right-side,
+    #main-header .header-inner1 h2,
+    #skills .skills-text {
         width: 100%;
 
     }
@@ -288,13 +279,12 @@
         padding: 0
     }
 
-    #main-header .header-inner1 {
-        width: 100%;
-    }
-
+    #main-header .header-inner1,
     #main-header .header-inner2 {
         width: 100%;
     }
+
+  
 
     section#skills,
     section#technologies {
