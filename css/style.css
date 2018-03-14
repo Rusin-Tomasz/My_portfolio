@@ -687,7 +687,7 @@ h6 {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    background-color: #2ddd1e;
+    background-color: #74c323;
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -697,8 +697,8 @@ h6 {
 }
 
 #contact .submit:hover {
-    background-color: #FFF;
-    color: #14ff00;
+    background-color: #88f21b;
+    color: #ffffff;
 }
 
 
