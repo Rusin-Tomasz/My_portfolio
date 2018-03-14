@@ -8,6 +8,50 @@ $(document).ready(function () {
         };
 
     });
+    // ---Zmnienne do aktywnej nawigacji oraz icon---
+    var headerHeight = parseInt($('#main-header').outerHeight(), 10);
+    var aboutHeight = parseInt($('#about').outerHeight(), 10);
+    var skillsHeight = parseInt($('#skills').outerHeight(), 10);
+    var technologiesHeight = parseInt($('#technologies').outerHeight(), 10);
+    var projectsHeight = parseInt($('#projects').outerHeight(), 10);
+
+
+    //    -----aktywna nawigacja-----
+
+
+    function activeMenu() {
+        var actualY = parseInt($(window).scrollTop(), 10);
+        if (actualY < headerHeight) {
+            $('.home').addClass('active');
+        } else {
+            $('.home').removeClass('active');
+        };
+        
+        if (actualY >= headerHeight && actualY < (headerHeight + aboutHeight)) {
+            $('.about').addClass('active');
+        } else {
+            $('.about').removeClass('active');
+        };
+
+        if (actualY >= (headerHeight + aboutHeight) && actualY < (headerHeight + aboutHeight + skillsHeight + technologiesHeight)) {
+            $('.skills').addClass('active');
+        } else {
+            $('.skills').removeClass('active');
+        };
+
+        if (actualY >= (headerHeight + aboutHeight + skillsHeight + technologiesHeight) && actualY < (headerHeight + aboutHeight + skillsHeight + technologiesHeight + projectsHeight)) {
+            $('.projects').addClass('active');
+        } else {
+            $('.projects').removeClass('active');
+        };
+
+        if (actualY >= (headerHeight + aboutHeight + skillsHeight + technologiesHeight + projectsHeight)) {
+            $('.contact').addClass('active');
+        } else {
+            $('.contact').removeClass('active');
+        };
+    };
+    
     //    -----Smooth Scroll------
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
@@ -77,12 +121,13 @@ $(document).ready(function () {
 
         $(window).scroll(function () {
             showIcons();
+            activeMenu();
         });
     };
 
     function showIcons() {
-        var headerHeight = parseInt($('#main-header').outerHeight(), 10);
-        var aboutHeight = parseInt($('#about').outerHeight(), 10);
+        //        var headerHeight = parseInt($('#main-header').outerHeight(), 10);
+        //        var aboutHeight = parseInt($('#about').outerHeight(), 10);
         var skillsInnerHeight = parseInt($('.skills-inner').outerHeight(), 10);
         var actualY = parseInt($(window).scrollTop(), 10);
 
