@@ -6,7 +6,6 @@ $(document).ready(function () {
         } else {
             $('#drop-menu').slideDown(500).addClass('expanded');
         };
-
     });
     // ---Zmnienne do aktywnej nawigacji oraz icon---
     var headerHeight = parseInt($('#main-header').outerHeight(), 10);
@@ -15,9 +14,7 @@ $(document).ready(function () {
     var technologiesHeight = parseInt($('#technologies').outerHeight(), 10);
     var projectsHeight = parseInt($('#projects').outerHeight(), 10);
 
-
     //    -----aktywna nawigacja-----
-
 
     function activeMenu() {
         var actualY = parseInt($(window).scrollTop(), 10);
@@ -26,7 +23,7 @@ $(document).ready(function () {
         } else {
             $('.home').removeClass('active');
         };
-        
+
         if (actualY >= headerHeight && actualY < (headerHeight + aboutHeight)) {
             $('.about').addClass('active');
         } else {
@@ -51,7 +48,7 @@ $(document).ready(function () {
             $('.contact').removeClass('active');
         };
     };
-    
+
     //    -----Smooth Scroll------
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
@@ -80,7 +77,6 @@ $(document).ready(function () {
             $('#comment').val('Wpisz wiadomość!');
             $('#comment').addClass('input-error');
         };
-
     };
 
     $('#comment').click(function () {
@@ -121,13 +117,13 @@ $(document).ready(function () {
 
         $(window).scroll(function () {
             showIcons();
-            activeMenu();
+            if (window.outerWidth > 992) {
+                activeMenu();
+            };
         });
     };
 
     function showIcons() {
-        //        var headerHeight = parseInt($('#main-header').outerHeight(), 10);
-        //        var aboutHeight = parseInt($('#about').outerHeight(), 10);
         var skillsInnerHeight = parseInt($('.skills-inner').outerHeight(), 10);
         var actualY = parseInt($(window).scrollTop(), 10);
 
@@ -151,7 +147,4 @@ $(document).ready(function () {
             $('.icon-4').show(1000, 'linear');
         };
     };
-
-    //    ----------Koniec pojawiania się ikon po scrollu-----------
-
 })
