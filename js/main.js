@@ -1,3 +1,16 @@
+  //preloader
+    var preloader = $('#preloader')
+    
+    window.addEventListener('load', function() {
+        preloader.addClass('preloader-hiding');
+        
+        preloader.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+            preloader.addClass('preloader-hiden');
+            preloader.removeClass('preloader-hiding')
+        })
+    })
+
+
 $(document).ready(function () {
     $('.toggle').click(function () {
         var dropMenu = $('#drop-menu');
@@ -7,6 +20,7 @@ $(document).ready(function () {
             $('#drop-menu').slideDown(500).addClass('expanded');
         };
     });
+        
     // ---Zmnienne do aktywnej nawigacji oraz icon---
     var headerHeight = parseInt($('#main-header').outerHeight(), 10);
     var aboutHeight = parseInt($('#about').outerHeight(), 10);
@@ -24,13 +38,13 @@ $(document).ready(function () {
             $('.home').removeClass('active');
         };
 
-        if (actualY >= headerHeight && actualY < (headerHeight + aboutHeight)) {
+        if (actualY >= headerHeight && actualY  < (headerHeight + aboutHeight - 10 )) {
             $('.about').addClass('active');
         } else {
             $('.about').removeClass('active');
         };
 
-        if (actualY >= (headerHeight + aboutHeight) && actualY < (headerHeight + aboutHeight + skillsHeight + technologiesHeight)) {
+        if (actualY >= (headerHeight + aboutHeight - 10) && actualY < (headerHeight + aboutHeight + skillsHeight + technologiesHeight)) {
             $('.skills').addClass('active');
         } else {
             $('.skills').removeClass('active');
@@ -48,6 +62,8 @@ $(document).ready(function () {
             $('.contact').removeClass('active');
         };
     };
+
+
 
     //    -----Smooth Scroll------
     $(document).on('click', 'a[href^="#"]', function (event) {
@@ -105,7 +121,7 @@ $(document).ready(function () {
     //  ---------Koniec walidacji formularza----------
 
     //  ------------Pojawianie się ikon po scrollu----------
-    if (window.outerWidth > 1000) {
+    if (window.outerWidth > 992) {
         $('.icon-1').hide();
         $('.icon-2').hide();
         $('.icon-3').hide();
@@ -117,9 +133,7 @@ $(document).ready(function () {
 
         $(window).scroll(function () {
             showIcons();
-            if (window.outerWidth > 992) {
-                activeMenu();
-            };
+            activeMenu();
         });
     };
 
