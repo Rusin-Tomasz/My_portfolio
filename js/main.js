@@ -1,16 +1,3 @@
-  //preloader
-    var preloader = $('#preloader')
-    
-    window.addEventListener('load', function() {
-        preloader.addClass('preloader-hiding');
-        
-        preloader.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-            preloader.addClass('preloader-hiden');
-            preloader.removeClass('preloader-hiding')
-        })
-    })
-
-
 $(document).ready(function () {
     $('.toggle').click(function () {
         var dropMenu = $('#drop-menu');
