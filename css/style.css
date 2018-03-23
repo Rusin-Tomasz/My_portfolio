@@ -480,7 +480,8 @@ h6 {
 }
 
 #projects .projects-inner .project-2 {
-    background-image: url('../img/pig-game.png');
+    background-image: url('../img/beer-game.PNG');
+    background-position: top;
 
 }
 
