@@ -93,6 +93,9 @@ h6 {
     color: #000000;
     font-size: 15px;
     padding: 0 8px;
+    font-size: 1.5em;
+    font-family: "Merriweather Sans";
+    font-weight: 500;
 }
 
 #main-nav ul .active {
