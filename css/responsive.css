@@ -25,6 +25,37 @@
         height: 100%;
     }
 
+
+    #main-nav ul .list-item a:hover::before,
+    #main-nav ul .active a:before {
+        content: '';
+        position: absolute;
+        width: 60%;
+        border: solid 1px #7dbeff;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    
+    #main-nav ul .list-item:hover {
+        background-color: #000000;
+    }
+    
+    #main-nav ul .active  {
+    background-color: #000000;
+    }
+    
+    #main-nav ul .list-item a:hover {
+        color: #ffffff;
+        position: relative;
+    }
+
+    #main-nav ul .active a {
+        color: #ffffff;
+        position: relative;
+    }
+
     #skills .icon-1::after {
         font-family: 'fontAwesome';
         font-size: 90px;
@@ -291,7 +322,7 @@
         height: 256px;
         width: 256px;
     }
-    
+
     section#skills h2,
     section#technologies .technologies-head {
         line-height: 80px;
@@ -362,11 +393,9 @@
         margin-left: 20px;
     }
 
-
 }
 
 @media all and (max-width: 485px) {
-
 
     section#about,
     section#skills {
@@ -385,10 +414,9 @@
     .bg-1 {
         display: none;
     }
-    
-     #contact .my-mail {
+
+    #contact .my-mail {
         font-size: 16px;
     }
-    
-}
 
+}
