@@ -1,6 +1,5 @@
-
 @media all and (min-width: 1200px) and (max-width: 2000px) {
-    
+
     #projects::before {
         content: 'Projects';
         position: absolute;
@@ -9,7 +8,7 @@
         z-index: -1;
         top: 0%;
         left: 0%;
-        font-size: 17rem;
+        font-size: 15rem;
         text-transform: uppercase;
         transform: rotate(70deg);
         font-family: 'Merriweather Sans', sans-serif;
@@ -36,8 +35,6 @@
         color: rgba(240, 8, 8, 0.6);
         animation: scale 3s linear infinite;
     }
-
-
 
     #skills .icon-3::before {
         font-family: 'fontAwesome';
@@ -98,13 +95,106 @@
     }
 }
 
+@media all and (max-width: 1400px) {
 
-
-@media all and (max-width: 1200px) {
 
     body {
+        font-size: 0.7rem;
+    }
+
+    #main-header .header-inner2 {
+        border: solid 20px
+    }
+
+    #main-header .header-inner2::after {
+        top: -18px;
+    }
+
+    #main-header .header-inner2::before {
+        bottom: -15px;
+    }
+
+
+    #skills .icon-1::after,
+    #skills .icon-3::before,
+    #skills .icon-3::after {
+        font-size: 60px
+    }
+
+    #skills .icon {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #skills .icon-1 {
+        background-image: url("../icons/HTML5/256.png");
+    }
+
+    #skills .icon-2 {
+        background-image: url("../icons/CSS3/256.png");
+    }
+
+    #skills .icon-3 {
+        background-image: url("../icons/JS/256.png");
+    }
+
+    #skills .icon-4 {
+        background-image: url("../icons/jQuery/256.png");
+    }
+
+    #skills .icon {
+        height: 325px;
+        width: 325px;
+    }
+
+    h2 {
+        font-size: 2.35rem;
+    }
+
+    #main-header .header-inner1 h1 {
+        font-size: 3.2rem;
+    }
+
+    #main-header .header-inner1 h2 {
+        font-size: 2rem;
+
+    }
+
+    #about > p {
+        font-size: 0.7rem
+    }
+
+    #about h3 {
         font-size: 0.9rem;
     }
+
+    section#skills h2 {
+        line-height: 80px;
+    }
+
+    section#skills h3,
+    #projects h3,
+    #contact h3 {
+        font-size: 2rem;
+    }
+
+    #contact .my-mail {
+        font-size: 18px;
+    }
+
+    #contact h2,
+    #projects h2 {
+        line-height: 60px;
+    }
+
+    #contact label {
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+}
+
+@media all and (max-width: 1200px) {
 
     #main-header .header-inner1 {
         width: 40%;
@@ -115,8 +205,8 @@
         width: 35%
     }
 
-    #contact .my-mail {
-        font-size: 25px;
+    #contact .social-media {
+        margin-bottom: 10px;
     }
 }
 
@@ -191,33 +281,23 @@
     #about > p {
         width: 100%;
     }
-    
+
+
+    #skills .skills-inner {
+        margin: auto;
+    }
+
     #skills .icon {
         height: 256px;
         width: 256px;
     }
-
-    #skills .icon-1 {
-        background-image: url("../icons/HTML5/256.png");
-    }
-
-    #skills .icon-2 {
-        background-image: url("../icons/CSS3/256.png");
-    }
-
-    #skills .icon-3 {
-        background-image: url("../icons/JS/256.png");
-    }
-
-    #skills .icon-4 {
-        background-image: url("../icons/jQuery/256.png");
-    }
-
+    
     section#skills h2,
-    section#technologies h2 {
+    section#technologies .technologies-head {
         line-height: 80px;
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
+
 
     #projects .projects-inner .project-sample {
         width: 100%;
@@ -229,22 +309,10 @@
         margin-bottom: 50px;
     }
 
-    #contact .my-mail {
-        font-size: 18px;
-    }
-
-    #contact h2,
-    #projects h2 {
-        line-height: 60px;
-    }
-
-    #contact label {
-        line-height: 35px;
-    }
 }
 
 
-@media all and (max-width: 770px) {
+@media all and (max-width: 810px) {
 
     #about .features {
         width: 80%;
@@ -262,22 +330,14 @@
         width: 100%;
 
     }
+
+    #contact ul li {
+        margin: 0;
+    }
+
 }
 
 @media all and (max-width: 570px) {
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    #main-header .header-inner1 h1 {
-        font-size: 4rem;
-    }
-
-    #main-header .header-inner1 h2 {
-        font-size: 2rem;
-
-    }
 
     #main-header {
         height: auto;
@@ -289,7 +349,6 @@
         width: 100%;
     }
 
-  
 
     section#skills,
     section#technologies {
@@ -303,19 +362,11 @@
         margin-left: 20px;
     }
 
-    #contact h3 {
-        font-size: 2.5rem;
-    }
-    #contact ul li {
-        margin: 0;
-    }
-    #projects h3 {
-        font-size: 2.5rem;
-    }
 
 }
 
 @media all and (max-width: 485px) {
+
 
     section#about,
     section#skills {
@@ -334,10 +385,10 @@
     .bg-1 {
         display: none;
     }
+    
+     #contact .my-mail {
+        font-size: 16px;
+    }
+    
 }
 
-@media all and (max-height: 570px) {
-    #main-header .header-inner1 {
-        height: auto;
-    }    
-}
